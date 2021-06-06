@@ -1,10 +1,10 @@
-import Container from './components/Container';
+import Retrieve from './components/Retrieve';
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Container />
+        <Retrieve />
       </header>
     </div>
   );

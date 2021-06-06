@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Container from '@material-ui/core/Container';
 
-const Container = () => {
+const Retrieve = () => {
   const [apiResponse, setApiResponse] = useState('');
 
   //   useEffect(() => {
@@ -25,7 +26,16 @@ const Container = () => {
     callAPI();
   });
 
-  return <div>test: {apiResponse}</div>;
+  return (
+    <React.Fragment>
+      <Container
+        // maxWidth='sm'
+        style={{ backgroundColor: '#E5E5E5', height: '100vh' }}
+      >
+        {apiResponse}
+      </Container>
+    </React.Fragment>
+  );
 };
 
-export default Container;
+export default Retrieve;
