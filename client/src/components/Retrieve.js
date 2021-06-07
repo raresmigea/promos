@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Line from './Line';
+import './Retrieve.scss';
 
 const Retrieve = () => {
-  const [apiResponse, setApiResponse] = useState('');
+  const [apiResponse, setApiResponse] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   //   useEffect(() => {
   //     async function fetchData() {
@@ -18,23 +22,23 @@ const Retrieve = () => {
 
   const callAPI = () => {
     fetch('http://localhost:9000/testAPI')
-      .then((res) => res.text())
-      .then((res) => setApiResponse(res));
+      .then((response) => response.json())
+      .then((data) => setApiResponse(data));
   };
 
   useEffect(() => {
     callAPI();
-  });
-
+    setLoading(false);
+  }, [loading]);
   return (
-    <React.Fragment>
-      <Container
-        // maxWidth='sm'
-        style={{ backgroundColor: '#E5E5E5', height: '100vh' }}
-      >
-        {apiResponse}
+    <div>
+      <Typography className='typography'>aaa</Typography>
+      <Container style={{ backgroundColor: '#E5E5E5' }}>
+        {apiResponse.map((a) => (
+          <Line data={a} />
+        ))}
       </Container>
-    </React.Fragment>
+    </div>
   );
 };
 
