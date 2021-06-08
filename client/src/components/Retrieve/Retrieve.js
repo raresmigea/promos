@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Line from './Line';
-import Title from './Title';
-import Search from './Search';
+import Line from '../Line/Line';
+import Title from '../Title/Title';
+import Search from '../Search/Search';
 import './Retrieve.scss';
 
 const Retrieve = () => {
   const [apiResponse, setApiResponse] = useState([]);
-  // const [loading, setLoading] = useState(true);
 
   const callAPI = () => {
     fetch('http://localhost:9000/testAPI')
@@ -18,7 +16,6 @@ const Retrieve = () => {
 
   useEffect(() => {
     callAPI();
-    // setLoading(false);
   }, []);
   return (
     <div className='main-page'>

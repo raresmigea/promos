@@ -27,9 +27,6 @@ connection.connect(function (err) {
   });
 });
 
-router.post('/', function (req, res) {
-  // console.log('req: ', req.params);
-  console.log('res: ', res.body);
-});
+// router.get('/', function (req, res) {});
 
 module.exports = router;

@@ -32,10 +32,18 @@ const Line = ({ data }) => {
           type='text'
           placeholder={data.promo_code}
         ></input>
-        {/* <div>{data.has_bonus}</div> */}
       </div>
       <div className='third-column'>
-        <Button className='button' onClick={() => toggleButton(data)}>
+        <Button
+          style={{
+            height: '50px',
+            marginTop: '15px',
+            backgroundColor: ' #0085FF',
+            color: '#fff',
+          }}
+          variant='contained'
+          onClick={() => toggleButton(data)}
+        >
           {data.has_bonus ? 'Activated' : 'Activate bonus'}
         </Button>
       </div>

@@ -1,4 +1,4 @@
-import Retrieve from './components/Retrieve';
+import Retrieve from './components/Retrieve/Retrieve';
 
 function App() {
   return (

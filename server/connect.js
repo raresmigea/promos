@@ -12,25 +12,25 @@ connection.connect(function (err) {
     return console.error('error: ' + err.message);
   }
   // create tables
-  //   let createTodos = `create table if not exists todos(
-  //                             id int primary key auto_increment,
-  //                             name varchar(255)not null,
-  //                             description varchar(255)not null,
-  //                             has_bonus tinyint(1) not null default 0,
-  //                             promo_code varchar(255)not null
-  //                         )`;
-  //   connection.query(createTodos, function (err, results, fields) {
-  //     if (err) {
-  //       console.log(err.message);
-  //     } else {
-  //       console.log('da');
-  //     }
-  //   });
+  let createTodos = `create table if not exists todos(
+                              id int primary key auto_increment,
+                              name varchar(255)not null,
+                              description varchar(255)not null,
+                              has_bonus tinyint(1) not null default 0,
+                              promo_code varchar(255)not null
+                          )`;
+  connection.query(createTodos, function (err, results, fields) {
+    if (err) {
+      console.log(err.message);
+    } else {
+      console.log('da');
+    }
+  });
 
   // insert new column
-  //   let sql = `INSERT INTO todos(name,description,has_bonus,promo_code)
-  //            VALUES('Mike','description', 1, 'secretcode')`;
-  //   connection.query(sql);
+  let sql = `INSERT INTO todos(name,description,has_bonus,promo_code)
+             VALUES('Mike','description', 1, 'secretcode')`;
+  connection.query(sql);
 
   // let sql = `SELECT * FROM todos WHERE name="mike"`; // + mysql.escape(id);
   let sql = `SELECT * FROM todos`; // + mysql.escape(id);

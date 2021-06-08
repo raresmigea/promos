@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import './Search.scss';
 
-const Search = ({ e }) => {
+const Search = () => {
   const [input, setInput] = useState('');
 
   useEffect(() => {
@@ -26,10 +24,11 @@ const Search = ({ e }) => {
       <div className='services-title'>Services</div>
       <div>
         <input
-          onKeyUp={handleInput}
+          onChange={handleInput}
           className='input-search'
           type='text'
           placeholder='search'
+          value={input}
         />
 
         <Button onClick={handleClick}>reset</Button>
