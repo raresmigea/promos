@@ -27,8 +27,9 @@ connection.connect(function (err) {
   });
 });
 
-// router.get('/', function (req, res, next) {
-//   res.send('de la backend');
-// });
+router.post('/', function (req, res) {
+  console.log('req: ', req);
+  console.log('res: ', res.body);
+});
 
 module.exports = router;

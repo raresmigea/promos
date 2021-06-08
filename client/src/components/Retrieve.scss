@@ -1,4 +1,27 @@
+.main-page {
+  display: flex;
+}
+
+.title {
+  height: 80px;
+  background-color: #fff;
+}
+
+.promos-container {
+  padding-top: 40px;
+}
 .typography {
   background-color: #fff;
   height: 80px;
+}
+
+.left-side {
+  // left: 80px;
+  background-color: #1b1d29;
+  width: 80px;
+}
+
+.right-side {
+  // left: 80px;
+  // background-color: #1b1d29;
 }

@@ -6,7 +6,18 @@ import './Line.scss';
 
 const Line = ({ data }) => {
   const toggleButton = (data) => {
-    console.log('data: ', data);
+    fetch('http://localhost:9000/testAPI', {
+      method: 'POST',
+      body: {
+        id: data.id,
+      },
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (body) {
+        console.log(body);
+      });
   };
   return (
     <Typography className='line'>

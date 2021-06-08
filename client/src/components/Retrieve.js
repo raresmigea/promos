@@ -2,23 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Line from './Line';
+import Search from './Search';
 import './Retrieve.scss';
 
 const Retrieve = () => {
   const [apiResponse, setApiResponse] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  //   useEffect(() => {
-  //     async function fetchData() {
-  //       const url = 'http://localhost:9000/testAPI';
-  //       const response = await fetch(url);
-  //       console.log('response: ', response);
-  //       const result = await response.json();
-  //       console.log('result: ', result);
-  //       setApiResponse(result);
-  //     }
-  //     fetchData();
-  //   }, []);
+  // const [loading, setLoading] = useState(true);
 
   const callAPI = () => {
     fetch('http://localhost:9000/testAPI')
@@ -28,16 +17,23 @@ const Retrieve = () => {
 
   useEffect(() => {
     callAPI();
-    setLoading(false);
-  }, [loading]);
+    // setLoading(false);
+  }, []);
   return (
-    <div>
-      <Typography className='typography'>aaa</Typography>
-      <Container style={{ backgroundColor: '#E5E5E5' }}>
-        {apiResponse.map((a) => (
-          <Line data={a} />
-        ))}
-      </Container>
+    <div className='main-page'>
+      <div className='left-side'></div>
+      <div className='right-side'>
+        <div className='title'>Balance and etc</div>
+        <Container
+          className='promos-container'
+          style={{ backgroundColor: '#E5E5E5' }}
+        >
+          <Search />
+          {apiResponse.map((a) => (
+            <Line data={a} />
+          ))}
+        </Container>
+      </div>
     </div>
   );
 };
