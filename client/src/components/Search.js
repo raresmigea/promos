@@ -9,26 +9,6 @@ const Search = ({ data }) => {
     console.log('data: ', data);
   };
   return (
-    // <Typography className='line'>
-    //   <div className='first-column'>
-    //     <div className='name'>{data.name}</div>
-    //     <div className='description'>{data.description}</div>
-    //   </div>
-    //   <div className='second-column'>
-    //     <div className='promocode-label'>PROMOCODE</div>
-    //     <input
-    //       className='promocode-input'
-    //       type='text'
-    //       placeholder={data.promo_code}
-    //     ></input>
-    //     {/* <div>{data.has_bonus}</div> */}
-    //   </div>
-    //   <div className='third-column'>
-    //     <Button className='button' onClick={() => toggleButton(data)}>
-    //       {data.has_bonus ? 'Activated' : 'Activate bonus'}
-    //     </Button>
-    //   </div>
-    // </Typography>
     <div>
       <div className='services-title'>Services</div>{' '}
       <div>
