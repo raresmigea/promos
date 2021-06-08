@@ -7,14 +7,20 @@ import './Search.scss';
 const Search = ({ e }) => {
   const [input, setInput] = useState('');
 
-  const handleClick = (e) => {
-    console.log('iii: ', input);
-    setInput('');
-  };
+  useEffect(() => {
+    console.log(`State: ${input}`);
+  }, [input]);
 
-  const handleInput = (e) => {
-    setInput(e.target.value);
-  };
+  function handleClick() {
+    setInput('');
+  }
+
+  function handleInput(e) {
+    const {
+      target: { value },
+    } = e;
+    setInput(value);
+  }
   return (
     <div>
       <div className='services-title'>Services</div>
