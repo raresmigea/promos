@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Line from './Line';
+import Title from './Title';
 import Search from './Search';
 import './Retrieve.scss';
 
@@ -23,7 +24,7 @@ const Retrieve = () => {
     <div className='main-page'>
       <div className='left-side'></div>
       <div className='right-side'>
-        <div className='title'>Balance and etc</div>
+        <Title />
         <Container
           className='promos-container'
           style={{ backgroundColor: '#E5E5E5' }}
