@@ -1,6 +1,15 @@
 .title {
+  display: flex;
   height: 80px;
   background-color: #fff;
+  margin-left: 32px;
+}
+
+.column-one {
+  margin-right: 32px;
+}
+
+.key {
   font-family: Roboto;
   font-size: 13px;
   font-style: normal;
@@ -8,6 +17,8 @@
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
+  padding-top: 18px;
+  color: #7d7d7d;
 }
 
 .value {

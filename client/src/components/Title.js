@@ -3,9 +3,15 @@ import './Title.scss';
 
 const Title = () => {
   return (
-    <div>
-      <div className='title'>Balance</div>
-      <div className='value'>213 920 $</div>
+    <div className='title'>
+      <div className='column-one'>
+        <div className='key'>Balance</div>
+        <div className='value'>213 920 $</div>
+      </div>
+      <div>
+        <div className='key'>Payout</div>
+        <div className='value'>159 465 $</div>
+      </div>
     </div>
   );
 };

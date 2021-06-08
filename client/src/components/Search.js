@@ -5,15 +5,28 @@ import Button from '@material-ui/core/Button';
 import './Search.scss';
 
 const Search = ({ e }) => {
-  const toggleButton = (e) => {
-    console.log('eee: ', e.target.value);
-  };
+  const [input, setInput] = useState('');
+
+  function handleClick(e) {
+    console.log(input);
+    setInput('');
+  }
+
+  function handleInput(e) {
+    setInput(e.target.value);
+  }
   return (
     <div>
       <div className='services-title'>Services</div>
       <div>
-        <input className='input-search' type='text' placeholder='search' />
-        <Button onClick={(e) => toggleButton(e)}>reset</Button>
+        <input
+          onKeyUp={handleInput}
+          className='input-search'
+          type='text'
+          placeholder='search'
+        />
+
+        <Button onClick={handleClick}>reset</Button>
       </div>
     </div>
   );
