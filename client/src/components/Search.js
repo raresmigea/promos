@@ -7,14 +7,14 @@ import './Search.scss';
 const Search = ({ e }) => {
   const [input, setInput] = useState('');
 
-  function handleClick(e) {
-    console.log(input);
+  const handleClick = (e) => {
+    console.log('iii: ', input);
     setInput('');
-  }
+  };
 
-  function handleInput(e) {
+  const handleInput = (e) => {
     setInput(e.target.value);
-  }
+  };
   return (
     <div>
       <div className='services-title'>Services</div>
